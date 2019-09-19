@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- <select name="area1" id="area1">
+    <option data-subgroup="" value="">未選択</option>
+    <option data-subgroup="nihon" value="1">日本</option>
+    <option data-subgroup="amerika" value="2">アメリカ</option>
+    <option data-subgroup="doitu" value="3">ドイツ</option>
+  </select>
+  <select name="area2" id="area2">
+    <option data-group="" value="">未選択</option>
+    <option data-group="nihon" data-subgroup="tokyo" value="1">東京</option>
+    <option data-group="nihon" data-subgroup="niigata" value="2">新潟</option>
+    <option data-group="nihon" data-subgroup="okinawa" value="3">沖縄</option>
+    <option data-group="amerika" data-subgroup="nyu-yo-ku" value="1">ニューヨーク</option>
+    <option data-group="amerika" data-subgroup="sikago" value="2">シカゴ</option>
+    <option data-group="doitu" data-subgroup="kerun" value="1">ケルン</option>
+  </select>
+  <select name="area3" id="area3">
+    <option data-group="" value="">未選択</option>
+    <option data-group="tokyo" value="1">品川区</option>
+    <option data-group="tokyo" value="2">港区</option>
+    <option data-group="tokyo" value="3">江東区</option>
+    <option data-group="niigata" value="1">新潟市</option>
+    <option data-group="niigata" value="2">柏崎市</option>
+    <option data-group="niigata" value="3">長岡市</option>
+    <option data-group="okinawa" value="1">那覇市</option>
+    <option data-group="okinawa" value="2">粟国村</option>
+    <option data-group="okinawa" value="3">与那国町</option>
+    <option data-group="nyu-yo-ku" value="1">ニューヨークのどこか1</option>
+    <option data-group="nyu-yo-ku" value="2">ニューヨークのどこか2</option>
+    <option data-group="sikago" value="1">シカゴのどこか1</option>
+    <option data-group="sikago" value="2">シカゴのどこか2</option>
+    <option data-group="kerun" value="1">ケルンのどこか</option>
+  </select> -->
+
+    <p>大エリア<br>
+      <select size="1" name="area1" id="area1">
+        <option data-subgroup="" value="">未選択</option>
+        <option data-subgroup="hokkachihou" value="1">北海道地方</option>
+        <option data-subgroup="tohoku" value="2">東北地方</option>
+        <option data-subgroup="kanto" value="3">関東地方</option>
+        <option data-subgroup="chubu" value="4">中部地方</option>
+        <option data-subgroup="kinki" value="5">近畿地方</option>
+        <option data-subgroup="chugoku" value="6">中国地方</option>
+        <option data-subgroup="shikoku" value="7">四国地方</option>
+        <option data-subgroup="kyushu" value="8">九州地方</option>
+      </select>
+    </p>
+    <p>中エリア<br>
+      <select size="1" name="area2" id="area2">
+        <option data-group="" value="">未選択</option>
+        <option value="1" data-group="hokkaido" data-subgroup="hokkachihou">北海道</option>
+        <option value="1" data-group="aomori" data-subgroup="tohoku">青森県</option>
+        <option value="2" data-group="iwate" data-subgroup="tohoku">岩手県</option>
+        <option value="3" data-group="miyagi"data-subgroup="tohoku">宮城県</option>
+        <option value="4" data-group="akita" data-subgroup="tohoku">秋田県</option>
+        <option value="5" data-group="yamagata" data-subgroup="tohoku">山形県</option>
+        <option value="6" data-group="fukushima" data-subgroup="tohoku">福島県</option>
+        <option value="1" data-group="ibaraki" data-subgroup="kanto">茨城県</option>
+        <option value="2" data-group="tochigi" data-subgroup="kanto">栃木県</option>
+        <option value="3" data-group="gunma" data-subgroup="kanto">群馬県</option>
+        <option value="4" data-group="saitama" data-subgroup="kanto">埼玉県</option>
+        <option value="5" data-group="chiba" data-subgroup="kanto">千葉県</option>
+        <option value="6" data-group="tokyo" data-subgroup="kanto">東京都</option>
+        <option value="7" data-group="kanagawa" data-subgroup="kanto">神奈川県</option>
+        <option value="1" data-group="niigata" data-subgroup="chubu">新潟県</option>
+        <option value="2" data-group="toyama" data-subgroup="chubu">富山県</option>
+        <option value="3" data-group="ishikawa" data-subgroup="chubu">石川県</option>
+        <option value="4" data-group="fukui" data-subgroup="chubu">福井県</option>
+        <option value="5" data-group="yamanashi" data-subgroup="chubu">山梨県</option>
+        <option value="6" data-group="nagano" data-subgroup="chubu">長野県</option>
+        <option value="7" data-group="gifu" data-subgroup="chubu">岐阜県</option>
+        <option value="8" data-group="shizuoka" data-subgroup="chubu">静岡県</option>
+        <option value="9" data-group="aichi" data-subgroup="chubu">愛知県</option>
+        <option value="1" data-group="mie" data-subgroup="kansai">三重県</option>
+        <option value="2" data-group="shiga" data-subgroup="kansai">滋賀県</option>
+        <option value="3" data-group="kyoto" data-subgroup="kansai">京都府</option>
+        <option value="4" data-group="osaka" data-subgroup="kansai">大阪府</option>
+        <option value="5" data-group="hyogo" data-subgroup="kansai">兵庫県</option>
+        <option value="6" data-group="nara" data-subgroup="kansai">奈良県</option>
+        <option value="7" data-group="wakayama" data-subgroup="kansai">和歌山県</option>
+        <option value="1" data-group="tottori" data-subgroup="chugoku">鳥取県</option>
+        <option value="2" data-group="simane" data-subgroup="chugoku">島根県</option>
+        <option value="3" data-group="okayama" data-subgroup="chugoku">岡山県</option>
+        <option value="4" data-group="hirosima" data-subgroup="chugoku">広島県</option>
+        <option value="5" data-group="yamaguchi" data-subgroup="chugoku">山口県</option>
+        <option value="1" data-group="tokushima" data-subgroup="shikoku">徳島県</option>
+        <option value="2" data-group="kagawa" data-subgroup="shikoku">香川県</option>
+        <option value="3" data-group="ehime" data-subgroup="shikoku">愛媛県</option>
+        <option value="4" data-group="kochi" data-subgroup="shikoku">高知県</option>
+        <option value="1" data-group="fukuoka" data-subgroup="kyushu">福岡県</option>
+        <option value="2" data-group="saga" data-subgroup="kyushu">佐賀県</option>
+        <option value="3" data-group="nagasaki" data-subgroup="kyushu">長崎県</option>
+        <option value="4" data-group="kumamoto" data-subgroup="kyushu">熊本県</option>
+        <option value="5" data-group="oita" data-subgroup="kyushu">大分県</option>
+        <option value="6" data-group="miyazaki" data-subgroup="kyushu">宮崎県</option>
+        <option value="7" data-group="kagoshima" data-subgroup="kyushu">鹿児島県</option>
+        <option value="1" data-group="okinawa" data-subgroup="okinawa">沖縄県</option>
+
+      </select>
+    </p>
+    <p>名産<br>
+      <select size="1" name="area3" id="area3">
+        <option data-group="" value="">未選択</option>
+        <option data-group="hokkaido" value="1">かに</option>
+        <option data-group="hokkaido" value="2">いくら</option>
+        <option data-group="hokkaido" value="3">うに</option>
+        <option data-group="aomori" value="1">りんご</option>
+        <option data-group="aomori" value="2">にんにく</option>
+        <option data-group="aomori" value="3">ほたて</option>
+        <option data-group="iwate" value="1">わんこそば</option>
+        <option data-group="iwate" value="2">うに</option>
+        <option data-group="akita" value="1">きりたんぽ</option>
+        <option data-group="akita" value="2">秋田フキ</option>
+        <option data-group="yamagata" value="1">芋煮</option>
+        <option data-group="yamagata" value="2">ぶどう</option>
+        <option data-group="miyagi"value="1">牛タン</option>
+        <option data-group="miyagi"value="2">なまどら</option>
+        <option data-group="fukushima" value="1">桃</option>
+        <option data-group="fukushima" value="2">こんにゃく</option>
+        <option data-group="ibaraki" value="1">梅どら</option>
+        <option data-group="ibaraki" value="2">水戸納豆</option>
+        <option data-group="tochigi" value="1">ぎょうざ</option>
+        <option data-group="tochigi" value="2">とちおとめ</option>
+        <option data-group="gunma" value="1">花インゲン</option>
+        <option data-group="gunma" value="2">焼きまんじゅう</option>
+        <option data-group="saitama" value="1">ねぎ</option>
+        <option data-group="saitama" value="2">草加せんべい</option>
+        <option data-group="chiba" value="1">ぴーなっつ</option>
+        <option data-group="chiba" value="2">里芋</option>
+        <option data-group="tokyo" value="1">東京バナナ</option>
+        <option data-group="tokyo" value="2">もんじゃ</option>
+        <option data-group="kanagawa" value="1">かまぼこ</option>
+        <option data-group="kanagawa" value="2">大根</option>
+        <option data-group="niigata" value="1">こしひかり</option>
+        <option data-group="niigata" value="2">舞茸</option>
+        <option data-group="toyama" value="1">白エビ</option>
+        <option data-group="toyama" value="2">ほたるいか</option>
+        <option data-group="ishikawa" value="1">甘エビ</option>
+        <option data-group="ishikawa" value="2">いか</option>
+        <option data-group="fukui" value="1">花らっきょ</option>
+        <option data-group="fukui" value="2">ほしカキ</option>
+        <option data-group="yamanashi" value="1">ぶどう</option>
+        <option data-group="yamanashi" value="2">ほうとう</option>
+        <option data-group="nagano" value="1">信州そば</option>
+        <option data-group="nagano" value="2">えのきだけ</option>
+        <option data-group="gifu" value="1">栗きんとん</option>
+        <option data-group="gifu" value="2">みかん</option>
+        <option data-group="shizuoka" value="1">玉ねぎ</option>
+        <option data-group="shizuoka" value="2">お茶</option>
+        <option data-group="aichi" value="1">ういろう</option>
+        <option data-group="aichi" value="2">名古屋コーチン</option>
+        <option data-group="mie" value="1">イセエビ</option>
+        <option data-group="mie" value="2">赤福</option>
+        <option data-group="shiga" value="1">近江牛</option>
+        <option data-group="shiga" value="2">赤こんにゃく</option>
+        <option data-group="kyoto" value="1">生八つ橋</option>
+        <option data-group="kyoto" value="2">湯葉</option>
+        <option data-group="osaka" value="1">お好み焼き</option>
+        <option data-group="osaka" value="2">たこ焼き</option>
+        <option data-group="hyogo" value="1">バウムクーヘン</option>
+        <option data-group="hyogo" value="2">明石焼き</option>
+        <option data-group="nara" value="1">奈良漬</option>
+        <option data-group="nara" value="2">薩摩焼</option>
+        <option data-group="wakayama" value="1">はっさく</option>
+        <option data-group="wakayama" value="2">和歌山ラーメン</option>
+        <option data-group="tottori" value="1">20世紀梨</option>
+        <option data-group="tottori" value="2">松葉ガニ</option>
+        <option data-group="simane" value="1">出雲そば</option>
+        <option data-group="simane" value="2">津田株</option>
+        <option data-group="okayama" value="1">白桃</option>
+        <option data-group="okayama" value="2">きびだんご</option>
+        <option data-group="hirosima" value="1">もみじまんじゅう</option>
+        <option data-group="hirosima" value="2">カキ</option>
+        <option data-group="yamaguchi" value="1">レンコン</option>
+        <option data-group="yamaguchi" value="2">ウニ</option>
+        <option data-group="tokushima" value="1">鳴門金時</option>
+        <option data-group="tokushima" value="2">徳島ラーメン</option>
+        <option data-group="kagawa" value="1">讃岐うどん</option>
+        <option data-group="kagawa" value="2">にんにく</option>
+        <option data-group="ehime" value="1">温州ミカン</option>
+        <option data-group="ehime" value="2">いよかん</option>
+        <option data-group="kochi" value="1">ポンカン</option>
+        <option data-group="kochi" value="2">鰹節</option>
+        <option data-group="fukuoka" value="1">博多ラーメン</option>
+        <option data-group="fukuoka" value="2">辛子明太子</option>
+        <option data-group="saga" value="1">白玉まんじゅう</option>
+        <option data-group="saga" value="2">玉ねぎ</option>
+        <option data-group="nagasaki" value="1">長崎ちゃんぽん</option>
+        <option data-group="nagasaki" value="2">豆乳</option>
+        <option data-group="kumamoto" value="1">からしれんこん</option>
+        <option data-group="kumamoto" value="2">デコポン</option>
+        <option data-group="oita" value="1">かぼす</option>
+        <option data-group="oita" value="2">かぼちゃ</option>
+        <option data-group="miyazaki" value="1">キンカン</option>
+        <option data-group="miyazaki" value="2">ピーマン</option>
+        <option data-group="kagoshima" value="1">さつまあげ</option>
+        <option data-group="kagoshima" value="2">オクラ</option>
+        <option data-group="okinawa" value="1">ゴーヤ</option>
+        <option data-group="okinawa" value="2">トウガン</option>
+
+      </select>
+    </p>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/jquery_3.js"></script>
+</body>
+
+</html>
