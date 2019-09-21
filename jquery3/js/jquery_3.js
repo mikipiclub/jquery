@@ -4,7 +4,7 @@ selectEvent('#area1', '#area2');
 selectEvent('#area2', '#area3');
 //セレクトボックスの初期値
 $('#area1').val('').change();
-$('#area2').val('2').change();
+$('#area2').val('1').change();
 $('#area3').val('2').change();
 
 /**
