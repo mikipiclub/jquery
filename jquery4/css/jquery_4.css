@@ -1,0 +1,100 @@
+#click {
+  padding: 0 2em;
+  cursor: pointer;
+}
+.name {
+  width: 100px;
+  margin: 0 15px;
+}
+.td3, .td4 {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-bottom-style: hidden;
+}
+#edit {
+  margin: 0 20px;
+}
+#ok_btn, #can_btn  {
+  width: 90px;
+  height: 25px;
+  cursor: pointer;
+  margin: 0 20px;
+}
+#change_btn, #delete_btn {
+  width: 90px;
+  height: 25px;
+  cursor: pointer;
+  margin: 0 20px;
+}
+/*--- オーバーレイ ---*/
+.overlay, .overlay2, .overlay3 {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  background: rgba(6, 95, 181, .7);
+}
+/*--- モーダルウィンドウ ---*/
+.modal, .modal2, .modal3 {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  width: 50%;
+  height: 220px;
+  padding: 30px;
+  margin: auto;
+  background: #fff;
+  border-radius: 5px;
+  }
+.modalinner,.modalinner2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 80px 30px;
+  }
+  .consei, .conmei {
+    flex-basis: 50%;
+  }
+  .userid ,.username {
+    flex-basis: 50%;
+  }
+  .modalbtn {
+    text-align: center;
+  }
+.modal .modaltext {
+  font-size: 20px;
+  font-weight: normal;
+  text-align: center;
+}
+.modalchange{
+  margin-right: 180px;
+}
+.changeName {
+  text-align: center;
+  width: 289px;
+}
+.modal .close{
+  text-align: center;
+  margin: 30px;
+  cursor: pointer;
+}
+.mocontent{
+  text-align: center;
+  margin-bottom: 20px;
+}
+.mocontent2{
+  text-align: center;
+  margin-bottom: 40px;
+}
+.close {
+  text-align: center;
+  margin: 30px;
+  cursor: pointer;
+}
