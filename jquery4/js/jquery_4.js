@@ -33,16 +33,34 @@ $('#ok_btn').on('click', function () {
   data.append(tr);
 });
 
-// 編集ボタンを押し
-// $('#edit').on('click', function () {
-
-  $(document).on('click', "#edit", function(){
-
-  $('.overlay2, .modal2').fadeIn();
-  // 何番目のuserIDと名前なのか、一致して呼び出す方法は？
-  $('#userId').text();
-  $('#userName').text();
+// 編集のinputに変更があったら値を取得
+let $cn;
+$(document).on('change', ".changeName", function(){
+  $cn = $(this).val();
+  console.log($cn);
 });
+
+// 編集ボタンを押し
+$(document).on('click', "#edit", function(){
+  $('.overlay2, .modal2').fadeIn();
+
+  // 何番目のuserIDと名前なのか
+  let t = $(this).parent().parent().children();
+  for(let i = 0; i<t.length; i++) {
+    switch(i) {
+      case 0: $('#userId').text(t[i].innerText); break;
+      case 1: $('#userName').text(t[i].innerText); break;
+      default: break;
+    }
+  }
+
+  // 取得した値を反映
+  $(document).on('click', '#change_btn', function(){
+    t[1].innerText = $cn;
+  });
+});
+
+
 
 //モーダルの外側か閉じるをクリックでモーダルを閉じる
 $(document).on('click',".overlay2, .close, #change_btn, #can_btn", function() {
