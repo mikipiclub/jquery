@@ -27,19 +27,26 @@ function selectEvent(parentSelect, childSelect) {
       // テキストを複数取得する
       $(childSelect).find("option").each(function (index, element) {
         $(element).remove();
+        $(element).next().next().remove();
       });
     } else {
-      var subgroup = $(this).find('option:selected').attr('data-subgroup');
+      var subgroup01 = $(this).find('option:selected').attr('data-subgroup');
+      var subgroup02 = $(this).find('option:selected').attr('data-group');
+
       $(childSelect).html(childchange);
+
       $(childSelect).find("option").each(function (index, element) {
-        var group = $(element).attr('data-group');
-        if (group) {
-          if (subgroup == group) {
-            //$(element).css('display', 'block');//IEではoptionタグに対してdisplayは効かないため
-          } else {
-            //$(element).css('display', 'none');//IEではoptionタグに対してdisplayは効かないため
-            $(element).remove();
-          }
+
+        var group01 = $(element).attr('data-subgroup');
+        var group02 = $(element).attr('data-group');
+
+        if (subgroup02 == group02) {
+          //$(element).css('display', 'block');//IEではoptionタグに対してdisplayは効かないため
+        } else if (subgroup01 == group01) {
+          //$(element).css('display', 'block');//IEではoptionタグに対してdisplayは効かないため
+        } else {
+          //$(element).css('display', 'none');//IEではoptionタグに対してdisplayは効かないため
+          $(element).remove();
         }
       });
     }
