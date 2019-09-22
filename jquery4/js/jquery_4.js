@@ -22,6 +22,7 @@ $('#ok_btn').on('click', function () {
   td3 = document.createElement('td');
   td4 = document.createElement('td');
 
+  $(tr).addClass('_'+num);
   $(td1).append(num);
   $(td2).append(`${sei}　${mei}`);
   var html = '<button id="edit">編集</button>';
@@ -33,30 +34,37 @@ $('#ok_btn').on('click', function () {
   data.append(tr);
 });
 
-// 編集のinputに変更があったら値を取得
-let $cn;
-$(document).on('change', ".changeName", function(){
-  $cn = $(this).val();
-  console.log($cn);
-});
 
 // 編集ボタンを押し
 $(document).on('click', "#edit", function(){
   $('.overlay2, .modal2').fadeIn();
 
   // 何番目のuserIDと名前なのか
+  let p = $(this).parent().parent();
   let t = $(this).parent().parent().children();
   for(let i = 0; i<t.length; i++) {
     switch(i) {
-      case 0: $('#userId').text(t[i].innerText); break;
+      case 0: $('#userId').text(t[i].innerText).addClass('userId'+t[i].innerText); break;
       case 1: $('#userName').text(t[i].innerText); break;
       default: break;
     }
+    function backId() {
+      return p;
+    }
   }
+
+  // 編集のinputに変更があったら値を取得
+  let $cn;
+  $(document).on('change', ".changeName", function(){
+    $cn = $(this).val();
+    // console.log($cn);
+  });
 
   // 取得した値を反映
   $(document).on('click', '#change_btn', function(){
-    t[1].innerText = $cn;
+    
+    let p = backId();
+    $(p).children().eq(1).text($cn);
   });
 });
 
